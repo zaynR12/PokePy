@@ -2,11 +2,14 @@ from BattleSystem import *
 from Trainer import *
 from Pokemon import *
 from Move import *
+from Menu import *
+
 
 
 
 
 class main():
+    running = True
     print("test ----------------------------------------------------------")
     trainer1 = Trainer("Ash")
     trainer2 = Trainer("Cynthia")
@@ -29,10 +32,22 @@ class main():
     print(*trainer1.team)
 
 
+    menu = Menu()
+
+    while running:
+        print("HOME MENU")
+        print("1. build teams 2. battle")
+        inp = input(">>> ")
+
+        if inp == '1':
+            menu.select_trainer_menu()
+
+
 
 '''
     battle = BattleSystem(trainer1, trainer2)
     battle.battle_loop()
 '''
+
 
 main()

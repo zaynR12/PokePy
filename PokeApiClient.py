@@ -31,10 +31,13 @@ class PokeApiClient():
         "base_speed"     : poke_dic["stats"][5]["base_stat"]
         }
 
+        '''
         print("DEBUGGING LINE IN POKEAPICLIENT POKESTATDIC")
         for k,v in poke_stat_dic.items():
             print(k, v)
         print("fin debug-----------------------------------")
+        '''
+        
         return poke_stat_dic
 
 
