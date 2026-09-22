@@ -1,2 +1,2 @@
-from Pokemon import *
+from PokePy.Pokemon import *
 

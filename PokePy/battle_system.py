@@ -1,5 +1,5 @@
-from Trainer import *
-from Pokemon import *
+from PokePy.trainer import *
+from PokePy.pokemon import *
 
 class BattleSystem():
 
@@ -34,6 +34,6 @@ class BattleSystem():
                 self.player_turn(self.Trainer1, self.CurrPokemonA, self.CurrPokemonB)
             else:
                 self.player_turn(self.Trainer2, self.CurrPokemonB, self.CurrPokemonA)
-            count +=1
+            count +=1 
 
         

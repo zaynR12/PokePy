@@ -1,4 +1,4 @@
-from Trainer import *
+from trainer import *
 
 class Menu():
 
