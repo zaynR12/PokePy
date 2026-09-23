@@ -1,4 +1,4 @@
-from trainer import *
+from PokePy.models.trainer import *
 
 class Menu():
 

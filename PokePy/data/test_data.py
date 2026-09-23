@@ -1,6 +1,6 @@
-from trainer import Trainer
-from pokemon import Pokemon
-from move import Move
+from PokePy.models.trainer import Trainer
+from PokePy.models.pokemon import Pokemon
+from PokePy.models.move import Move
 
 
 
@@ -25,6 +25,7 @@ def setup_test_data():
     trainer1.add_pokemon("charmander")
 
     print(*trainer1.team)
+    return trainer1, trainer2
 
 
 

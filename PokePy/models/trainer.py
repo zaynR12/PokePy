@@ -1,8 +1,8 @@
-from pokemon import *
-from poke_factory import *
+from PokePy.models.pokemon import *
+from PokePy.data.poke_factory import *
 
 class Trainer:
-    all_trainers_dic: dict[Trainer, int] = {}
+    all_trainers_dic: dict[int, Trainer] = {}
     count = 0
 
     def __init__(self, name:str):
@@ -23,6 +23,10 @@ class Trainer:
 
     def add_pokemon(self, name: str):
         fac = PokeFactory()
-        p = fac.buildPokeObject(name)
+        p = fac.build_pokemon(name)
         print(p)
         self.team.append(p)
+
+    def command_pokemon(self, pokemon: Pokemon, move: Move):
+        #ensure move belongs to pokemon
+        pass

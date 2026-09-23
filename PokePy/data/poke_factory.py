@@ -1,13 +1,13 @@
-from poke_api_client import *
-from pokemon import *
+from PokePy.data.poke_api_client import PokeApiClient
+from PokePy.models.pokemon import Pokemon
 
-class PokeFactory():
+class PokeFactory:
 
     def __init__(self):
-        pass
+        self.api_client = PokeApiClient()
 
-    def buildPokeObject(self, name:str):
-        d = PokeApiClient().get_pokedic_stats(name)
+    def build_pokemon(self, name:str):
+        d = self.api_client.get_pokedic_stats(name)
         p = Pokemon(
             name,
             d["base_hp"],
